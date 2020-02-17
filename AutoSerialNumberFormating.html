@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link data-require="bootstrap@*" data-semver="3.3.7" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <style>
+        form {
+            margin: 20px 0;
+        }
+
+            form input, button {
+                padding: 5px;
+            }
+
+        .table-cont {
+            /**make table can scroll**/
+            max-height: 200px;
+            overflow: auto;
+            margin: 29px 100px !important;
+            box-shadow: 0 0 1px 3px #ddd;
+        }
+
+        thead {
+            background-color: #ddd;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="AutoSerial.js"></script>
+</head>
+<body>
+    <form style="margin-left: 25%;">
+        <input type="text" id="txtSerialNo" placeholder="Serial Number Formate">
+        <input type="text" id="txtSerialQty" placeholder="Serial Number Qty">
+        <input type="button" id="btnGenerateSerial" class="btn btn-success" value="Generate Serial Number">
+        <input type="button" id="btnTableClear" class="btn btn-danger" value="Clear Table" />
+    </form>
+    <div class='table-cont' id='table-cont'>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Row No.</th>
+                    <th>Auto Serial No</th>
+                </tr>
+            </thead>
+            <tbody id="autoSerialTBody">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
